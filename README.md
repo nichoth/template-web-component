@@ -11,7 +11,7 @@ A template for typescript *dependency* modules.
 
 * compile the source to both ESM and CJS format, and put compiled files in `dist`.
 * ignore `dist` and `*.js` in git, but don't ignore them in npm. That way we don't commit any compiled code to git, but it is available to consumers.
-* use npm's prepublishOnly hook to compile the code before publishing to npm.
+* use npm's `prepublishOnly` hook to compile the code before publishing to npm.
 * use `exports` field in `package.json` to make sure the right format is used by consumers.
 * `preversion` npm hook -- lint via `standardx`.
 * `postversion` npm hook -- `git push && git push --tags && npm publish`
