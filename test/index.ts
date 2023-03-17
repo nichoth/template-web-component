@@ -1,5 +1,5 @@
 import { test } from 'tapzero'
 
-test('make a post', async t => {
-    t.ok('example', 'should be an example')
+test('example', async t => {
+    t.ok('ok', 'should be an example')
 })
