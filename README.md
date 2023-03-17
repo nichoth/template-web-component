@@ -16,4 +16,4 @@ A template for typescript *dependency* modules.
 * `preversion` npm hook -- lint via `standardx`.
 * `postversion` npm hook -- `git push && git push --tags && npm publish`
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
-* tests are designed for a browser environment. Build tests with `esbuild` and run them with `tape-run`.
+* tests are designed for a browser environment. Build tests with `esbuild` and run them with `tape-run`. Includes `tap` tools -- [tapzero](https://github.com/socketsupply/tapzero) and [tap-arc](https://www.npmjs.com/package/tap-arc)
