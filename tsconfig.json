@@ -7,16 +7,23 @@
     "esModuleInterop": false,
     "lib": ["ES2021", "DOM", "WebWorker"],
     "allowJs": false,
-    "skipLibCheck": false,
+    "skipLibCheck": true,
+    "outDir": "dist",
     "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "strict": true,
-    "types": ["node"],
+    "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
     "noImplicitAny": false,
-    "declaration": true
+    "declaration": true,
+    "declarationDir": "dist",
+    "declarationMap": true
   },
   "include": ["src/**/*"]
 }
