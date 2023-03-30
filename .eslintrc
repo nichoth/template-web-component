@@ -16,6 +16,7 @@
     "no-undef": "off",
     "indent": [ "error", 4 ],
     "comma-dangle": "off",
-    "no-multi-spaces": ["error", { "ignoreEOLComments": true }]
+    "no-multi-spaces": ["error", { "ignoreEOLComments": true }],
+    "@typescript-eslint/no-floating-promises": "error"
   }
 }
