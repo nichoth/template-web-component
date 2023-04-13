@@ -12,7 +12,7 @@
     "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && tsc",
     "preversion": "npm run lint",
     "postversion": "git push && git push --tags && npm publish",
-    "prepublishOnly": "npm run build && tsc"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.55.0",
