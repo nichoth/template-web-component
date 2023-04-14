@@ -39,18 +39,10 @@
       ]
     }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nichoth/template-ts.git"
-  },
   "keywords": [
     "template",
     "typescript"
   ],
   "author": "nichoth <nichoth@gmail.com> (https://nichoth.com)",
-  "license": "AGPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/nichoth/template-ts/issues"
-  },
-  "homepage": "https://github.com/nichoth/template-ts#readme"
+  "license": "AGPL-3.0-or-later"
 }
