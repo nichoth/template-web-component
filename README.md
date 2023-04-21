@@ -1,6 +1,6 @@
 # template ts
 
-A template for typescript *dependency* modules.
+A template for typescript *dependency* modules that run in a browser environment. Uses `tape-run` for tests in a browser.
 
 ## use
 1. Use the template button in github. Or clone this then `rm -rf .git && git init`. Then `npm i && npm init`.
