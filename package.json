@@ -1,7 +1,6 @@
 {
-  "name": "@nichoth/template-ts",
   "type": "module",
-  "description": "A template for typescript *dependency* modules.",
+  "description": "A template for typescript dependency modules that run in a browser.",
   "version": "0.0.0",
   "main": "src/index.ts",
   "scripts": {
