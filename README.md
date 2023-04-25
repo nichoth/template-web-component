@@ -1,4 +1,4 @@
-# template ts
+# template ts browser
 
 A template for typescript *dependency* modules that run in a browser environment. Uses `tape-run` for tests in a browser.
 
