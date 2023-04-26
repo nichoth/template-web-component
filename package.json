@@ -12,6 +12,7 @@
     "postversion": "git push && git push --tags && npm publish",
     "prepublishOnly": "npm run build"
   },
+  "dependencies": {},
   "devDependencies": {
     "@typescript-eslint/parser": "^5.55.0",
     "esbuild": "^0.15.18",
