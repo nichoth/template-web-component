@@ -26,6 +26,8 @@ jobs:
       - name: Build tests
         run: |
           npm run build-tests
+      - name: install xvfb
+        run: sudo apt-get install xvfb
       - name: Run tests
         run: |
-          xvfb-run --server-args="-screen 0 1920x1080x24" npm run test-tape-run
+          xvfb-run --auto-servernum npm run test-tape-run
