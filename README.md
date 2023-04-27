@@ -17,4 +17,4 @@ A template for typescript *dependency* modules that run in a browser environment
 * `postversion` npm hook -- `git push && git push --tags && npm publish`
 * eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
 * tests run in a browser environment via `tape-run`. Run them with `npm test`. Includes `tap` testing tools -- [tapzero](https://github.com/socketsupply/tapzero) and [tap-arc](https://www.npmjs.com/package/tap-arc)
- 
+* CI via github actions
