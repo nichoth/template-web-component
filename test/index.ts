@@ -1,4 +1,4 @@
-import { test } from '@socketsupply/tapzero'
+import { test } from '@nichoth/tapzero'
 import { example } from '../src/index.js'
 
 test('example', async t => {
