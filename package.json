@@ -13,7 +13,7 @@
     "start": "vite",
     "preversion": "npm run lint",
     "version": "auto-changelog --template keepachangelog --breaking-pattern 'BREAKING CHANGE' && git add CHANGELOG.md",
-    "postversion": "git push && git push --tags && npm publish",
+    "postversion": "git push && git push --tags && npm publish && gh-release -y",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
