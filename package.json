@@ -1,4 +1,5 @@
 {
+  "private": true,
   "type": "module",
   "version": "0.0.0",
   "main": "dist/index.js",
@@ -11,6 +12,7 @@
     "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && tsc --project tsconfig.build.json",
     "start": "vite",
     "preversion": "npm run lint",
+    "version": "auto-changelog --template keepachangelog auto-changelog --breaking-pattern 'BREAKING CHANGE' && git add CHANGELOG.md",
     "postversion": "git push && git push --tags && npm publish",
     "prepublishOnly": "npm run build"
   },
@@ -19,6 +21,7 @@
     "@nichoth/tapzero": "^0.8.4",
     "@preact/preset-vite": "^2.7.0",
     "@typescript-eslint/parser": "^5.55.0",
+    "auto-changelog": "^2.4.0",
     "esbuild": "^0.19.5",
     "postcss-nesting": "^12.0.1",
     "preact": "^10.19.2",
