@@ -20,17 +20,17 @@
   "devDependencies": {
     "@nichoth/debug": "^0.5.0",
     "@nichoth/tapzero": "^0.8.4",
-    "@preact/preset-vite": "^2.7.0",
-    "@typescript-eslint/parser": "^6.15.0",
+    "@preact/preset-vite": "^2.8.1",
+    "@typescript-eslint/parser": "^6.20.0",
     "auto-changelog": "^2.4.0",
-    "esbuild": "^0.19.5",
-    "postcss-nesting": "^12.0.1",
-    "preact": "^10.19.2",
+    "esbuild": "^0.20.0",
+    "postcss-nesting": "^12.0.2",
+    "preact": "^10.19.3",
     "standardx": "^7.0.0",
     "tap-arc": "^1.2.2",
     "tape-run": "^11.0.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.0"
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12"
   },
   "exports": {
     ".": {
