@@ -3,6 +3,9 @@
   "type": "module",
   "version": "0.0.0",
   "main": "dist/index.js",
+  "files": [
+    "./dist/*"
+  ],
   "scripts": {
     "lint": "standardx -v \"./**/*.ts\"",
     "build-tests": "esbuild test/index.ts --target=es2020 --bundle --keep-names > test/test-bundle.js",
