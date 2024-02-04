@@ -1,8 +1,8 @@
 # template ts browser
 ![tests](https://github.com/nichoth/template-ts-browser/actions/workflows/nodejs.yml/badge.svg)
-[![types](https://img.shields.io/npm/types/@nichoth/**placeholder**)](README.md)
-[![module](https://img.shields.io/badge/module-ESM-blue)](README.md)
-[![license](https://img.shields.io/badge/license-MIT-brightgreen)](LICENSE)
+[![types](https://img.shields.io/npm/types/@nichoth/catch-links?style=flat-square)](README.md)
+[![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 A template for typescript *dependency* modules that run in a browser environment. Uses `tape-run` for tests in a browser. See [template-ts](https://github.com/nichoth/template-ts) for the same thing but targeting Node.
 
