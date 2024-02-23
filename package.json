@@ -7,7 +7,7 @@
     "./dist/*"
   ],
   "scripts": {
-    "lint": "standardx -v \"./**/*.ts\"",
+    "lint": "eslint \"./**/*.{ts,js}\"",
     "build-tests": "esbuild test/index.ts --target=es2020 --bundle --keep-names > test/test-bundle.js",
     "test": "npm run lint && npm run build && npm run build-tests && npm run test-tape-run",
     "test-tape-run": "cat test/index.html | tape-run --input=html --static=test | tap-arc",
@@ -19,16 +19,19 @@
     "postversion": "git push --follow-tags && npm publish",
     "prepublishOnly": "npm run build"
   },
+  "dependencies": {},
   "devDependencies": {
     "@nichoth/debug": "^0.6.1",
     "@nichoth/tapzero": "^0.8.4",
     "@preact/preset-vite": "^2.8.1",
     "@typescript-eslint/parser": "^7.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
     "auto-changelog": "^2.4.0",
     "esbuild": "^0.20.1",
+    "eslint": "^8.56.0",
+    "eslint-config-standard": "^17.1.0",
     "postcss-nesting": "^12.0.2",
     "preact": "^10.19.4",
-    "standardx": "^7.0.0",
     "tap-arc": "^1.2.2",
     "tape-run": "^11.0.0",
     "typescript": "^5.3.3",

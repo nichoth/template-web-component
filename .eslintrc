@@ -2,19 +2,17 @@
   "parser": "@typescript-eslint/parser",
   "ignorePatterns": ["lib.es5.d.ts"],
   "parserOptions": {
-    "requireConfigFile": false,
-    "babelOptions": {
-    }
+    "requireConfigFile": false
   },
+  "extends": [
+    "standard",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "@typescript-eslint"
+  ],
   "rules": {
     "operator-linebreak": ["off"],
-    "react/jsx-first-prop-new-line": ["off"],
-    "react/jsx-indent-props": "off",
-    "react/jsx-closing-tag-location": ["off"],
-    "react/jsx-closing-bracket-location": ["off"],
-    "react/jsx-curly-newline": ["off"],
-    "react/jsx-boolean-value": ["off"],
-    "jsx-quotes": ["error", "prefer-double"],
     "multiline-ternary": "off",
     "no-multiple-empty-lines": [
       "error",
