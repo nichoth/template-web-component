@@ -12,6 +12,7 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
     "operator-linebreak": ["off"],
     "multiline-ternary": "off",
     "no-multiple-empty-lines": [
