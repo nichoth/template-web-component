@@ -19,7 +19,7 @@ Uses `tape-run` for tests in a browser. See [template-ts](https://github.com/nic
 * ignore `dist` and `*.js` in git, but don't ignore them in npm. That way we
   don't commit any compiled code to git, but it is available to consumers.
 * use npm's `prepublishOnly` hook to compile the code before publishing to npm.
-* use `exports` field in `package.json` to make sure the right format is used
+* use [exports](./package.json#L41) field in `package.json` to make sure the right format is used
   by consumers.
 * `preversion` npm hook -- lint
 * `postversion` npm hook -- `git push --follow-tags && npm publish`
