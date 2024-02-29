@@ -21,10 +21,10 @@ Uses `tape-run` for tests in a browser. See [template-ts](https://github.com/nic
 * use npm's `prepublishOnly` hook to compile the code before publishing to npm.
 * use `exports` field in `package.json` to make sure the right format is used
   by consumers.
-* `preversion` npm hook -- lint via `standardx`.
-* `postversion` npm hook -- `git push && git push --tags && npm publish`
-* eslint via [standardx](https://www.npmjs.com/package/standardx) -- `npm run lint`
-* tests run in a browser environment via `tape-run` -- see `npm test`.
-  Includes `tap` testing tools -- [tapzero](https://github.com/nichoth/tapzero)
+* `preversion` npm hook -- lint
+* `postversion` npm hook -- `git push --follow-tags && npm publish`
+* eslint -- `npm run lint`
+* tests run in a browser environment via `tape-run` -- see [`npm test`](./package.json#L12).
+  Includes `tap` testing tools -- [tapzero](https://github.com/bicycle-codes/tapzero)
   and [tap-arc](https://www.npmjs.com/package/tap-arc)
 * CI via github actions
