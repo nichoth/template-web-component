@@ -14,6 +14,8 @@ Uses `tape-run` for tests in a browser. See [template-ts](https://github.com/nic
 
 2. Edit the source code in `src/index.ts`.
 
+3. Delete either `.github/workflows/gh-pages-docs.yml` or `.github/workflows/gh-pages.yml`, depending on whether you want to deploy an example or docs to github pages.
+
 ## featuring
 
 * compile the source to both ESM and CJS format, and put compiled files in `dist`.
