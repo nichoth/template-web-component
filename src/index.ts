@@ -17,6 +17,16 @@ export class Example extends HTMLElement {
 
     connectedCallback () {
         debug('connected')
+
+        const observer = new MutationObserver(function (mutations) {
+            mutations.forEach((mutation) => {
+                if (mutation.addedNodes.length) {
+                    debug('Node added: ', mutation.addedNodes)
+                }
+            })
+        })
+
+        observer.observe(this, { childList: true })
     }
 }
 
