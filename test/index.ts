@@ -1,7 +1,14 @@
 import { test } from '@bicycle-codes/tapzero'
-import { example } from '../src/index.js'
+import { waitFor } from '@bicycle-codes/dom'
+import '../src/index.js'
 
 test('example', async t => {
-    t.ok('ok', 'should be an example')
-    example()
+    document.body.innerHTML += `
+        <example-component class="test">
+        </example-component>
+    `
+
+    const el = await waitFor('example-component')
+
+    t.ok(el, 'should find an element')
 })

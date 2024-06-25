@@ -1,12 +1,11 @@
-# template ts browser
-![tests](https://github.com/nichoth/template-ts-browser/actions/workflows/nodejs.yml/badge.svg)
+# template web component
+![tests](https://github.com/nichoth/template-web-component/actions/workflows/nodejs.yml/badge.svg)
 [![types](https://img.shields.io/npm/types/@nichoth/catch-links?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
-A template for typescript *dependency* modules that run in a browser environment.
-Uses `tape-run` for tests in a browser. See [template-ts](https://github.com/nichoth/template-ts) for the same thing but targeting Node.
+A template for vanilla web components.
 
 ## use
 1. Use the template button in github. Or clone this then

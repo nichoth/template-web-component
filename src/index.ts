@@ -1,6 +1,18 @@
 import { createDebug } from '@bicycle-codes/debug'
 const debug = createDebug()
 
-export function example ():void {
-    debug('hello')
+export class Example extends HTMLElement {
+    constructor () {
+        super()
+
+        this.innerHTML = `<div>
+            example
+        </div>`
+    }
+
+    connectedCallback () {
+        debug('connected')
+    }
 }
+
+customElements.define('example-component', Example)
