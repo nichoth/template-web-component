@@ -6,7 +6,12 @@ export class Example extends HTMLElement {
         super()
 
         this.innerHTML = `<div>
-            example
+            <p>example</p>
+            <ul>
+                ${Array.from(this.children).filter(Boolean).map(node => {
+                    return `<li>${node.outerHTML}</li>`
+                }).join('')}
+            </ul>
         </div>`
     }
 
