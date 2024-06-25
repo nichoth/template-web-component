@@ -1,4 +1,5 @@
 {
+  "name": "@nichoth/example-webcomponent",
   "private": true,
   "type": "module",
   "version": "0.0.0",
@@ -17,7 +18,7 @@
     "build-esm": "esbuild src/*.ts --format=esm --metafile=dist/meta.json --keep-names --tsconfig=tsconfig.build.json --outdir=./dist --sourcemap && tsc --emitDeclarationOnly --project tsconfig.build.json --outDir dist",
     "build-esm:min": "esbuild ./src/index.ts --format=esm --keep-names --bundle --tsconfig=tsconfig.build.json --minify --outfile=./dist/index.min.js",
     "build-example": "mkdir -p ./public && rm -rf ./public/* && vite --base=\"/example\" build",
-    "build-docs": "typedoc ./src/index.ts",
+    "build-docs": "typedoc --tsconfig tsconfig.build.json ./src/index.ts",
     "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-esm:min && npm run build-css && npm run build-css:min",
     "start": "vite",
     "preversion": "npm run lint",
