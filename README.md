@@ -65,6 +65,27 @@ import '@namespace/package/module'
 require('@namespace/package/module')
 ```
 
+## CSS
+
+### Import CSS
+
+```js
+import '@substrate-system/text-input/css'
+```
+
+Or minified:
+```js
+import `@substrate-system/text-input/css/min
+```
+
+### Customize CSS via some variables
+
+```css
+component-name {
+    --example: pink;
+}
+```
+
 ## use
 This calls the global function `customElements.define`. Just import, then use
 the tag in your HTML.
