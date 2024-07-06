@@ -15,6 +15,11 @@ A template for vanilla web components.
 
 3. Delete either `.github/workflows/gh-pages-docs.yml` or `.github/workflows/gh-pages.yml`, depending on whether you want to deploy an example or docs to github pages.
 
+4. Edit things
+  * Edit this readme
+  * edit the `build-example` command in `package.json` so that it has the right
+    namespace for github pages
+
 ## featuring
 
 * compile the source to both ESM and CJS format, and put compiled files in `dist`.
@@ -42,6 +47,8 @@ A template for vanilla web components.
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 `<package description goes here>`
+
+[See a live demo](https://namespace.github.io/package-name/)
 
 ## install
 
