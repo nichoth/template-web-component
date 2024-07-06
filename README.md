@@ -30,3 +30,67 @@ A template for vanilla web components.
   Includes `tap` testing tools -- [tapzero](https://github.com/bicycle-codes/tapzero)
   and [tap-spec](https://www.npmjs.com/package/tap-spec)
 * CI via github actions
+
+-----------------------------------------------------------
+
+# package name here
+![tests](https://github.com/substrate-system/icons/actions/workflows/nodejs.yml/badge.svg)
+[![types](https://img.shields.io/npm/types/@substrate-system/icons?style=flat-square)](README.md)
+[![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
+[![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
+[![dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg?style=flat-square)](package.json)
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+
+`<package description goes here>`
+
+## install
+
+Installation instructions
+
+```sh
+npm i -S @substrate-system/icons
+```
+
+## API
+
+This exposes ESM and common JS via [package.json `exports` field](https://nodejs.org/api/packages.html#exports).
+
+### ESM
+```js
+import '@namespace/package/module'
+```
+
+### Common JS
+```js
+require('@namespace/package/module')
+```
+
+## use
+This calls the global function `customElements.define`. Just import, then use
+the tag in your HTML.
+
+### JS
+```js
+import '@namespace/package/module'
+```
+
+### HTML
+```html
+<div>
+    <example-component></example-component>
+</div>
+```
+
+### pre-built JS
+This package exposes minified JS files too. Copy them to a location that is
+accessible to your web server, then link to them in HTML.
+
+#### copy
+```sh
+cp ./node_modules/@namespace/package/dist/module.min.js ./public
+```
+
+#### HTML
+```html
+<script type="module" src="./module.min.js"></script>
+```
