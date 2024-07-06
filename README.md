@@ -1,9 +1,4 @@
 # template web component
-![tests](https://github.com/nichoth/template-web-component/actions/workflows/nodejs.yml/badge.svg)
-[![types](https://img.shields.io/npm/types/@nichoth/catch-links?style=flat-square)](README.md)
-[![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
-[![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
-[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 A template for vanilla web components.
 
@@ -16,7 +11,10 @@ A template for vanilla web components.
 3. Delete either `.github/workflows/gh-pages-docs.yml` or `.github/workflows/gh-pages.yml`, depending on whether you want to deploy an example or docs to github pages.
 
 4. __Edit things__
-    * Edit this readme
+    * Use `./README.example.md` as a starter for docs:
+    ```sh
+    cp ./README.example.md ./README.md
+    ```
     * edit the `build-example` command in `package.json` so that it has the right
     namespace for github pages
 
