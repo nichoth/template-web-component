@@ -48,7 +48,7 @@ A template for vanilla web components.
 Installation instructions
 
 ```sh
-npm i -S @substrate-system/icons
+npm i -S @namespace/package
 ```
 
 ## API
