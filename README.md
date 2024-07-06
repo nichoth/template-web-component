@@ -70,12 +70,12 @@ require('@namespace/package/module')
 ### Import CSS
 
 ```js
-import '@substrate-system/text-input/css'
+import '@namespace/package-name/css'
 ```
 
 Or minified:
 ```js
-import `@substrate-system/text-input/css/min
+import `@namespace/package-name/css/min
 ```
 
 ### Customize CSS via some variables
