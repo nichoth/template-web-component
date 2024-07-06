@@ -36,7 +36,24 @@ A template for vanilla web components.
   and [tap-spec](https://www.npmjs.com/package/tap-spec)
 * CI via github actions
 
+## the component
+
+See *[Web Component lifecycle methods](https://gomakethings.com/the-web-component-lifecycle-methods/)*.
+
+### [attributeChangedCallback](https://gomakethings.com/how-to-detect-when-attributes-change-on-a-web-component/#the-attributechangedcallback-method)
+
+> runs whenever an attribute on the Web Component is added, removed, or changes in value.
+
+> For performance reasons, the attributeChangedCallback() method only watches and reacts to attributes you tell it to. To do that, you create a `static` `observedAttributes` property, with an array of attributes to watch as its value.
+
+> You can use any attributes you’d like, including non-standard ones.
+
+
+### [disconnectedCallback](https://gomakethings.com/the-web-component-lifecycle-methods/#the-connectedcallback-and-disconnectedcallback-methods)
+
+
 -----------------------------------------------------------
+
 
 # package name here
 ![tests](https://github.com/substrate-system/icons/actions/workflows/nodejs.yml/badge.svg)

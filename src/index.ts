@@ -15,6 +15,17 @@ export class Example extends HTMLElement {
         </div>`
     }
 
+    // Define the attributes to observe
+    static observedAttributes = ['exmaple', 'attribute']
+
+    attributeChangedCallback (name:string, oldValue:string, newValue:string) {
+        debug('an attribute changed', name, oldValue, newValue)
+    }
+
+    disconnectedCallback () {
+        debug('disconnected')
+    }
+
     connectedCallback () {
         debug('connected')
 
