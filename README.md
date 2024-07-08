@@ -2,6 +2,8 @@
 
 A template for vanilla web components.
 
+See [Web Component lifecycle methods](https://gomakethings.com/the-web-component-lifecycle-methods/)
+
 ## use
 1. Use the template button in github. Or clone this then
 `rm -rf .git && git init`. Then `npm i && npm init`.
