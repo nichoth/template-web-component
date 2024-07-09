@@ -42,7 +42,7 @@ import '@namespace/package-name/css'
 
 Or minified:
 ```js
-import `@namespace/package-name/css/min
+import '@namespace/package-name/css/min'
 ```
 
 ### Customize CSS via some variables
