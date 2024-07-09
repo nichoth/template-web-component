@@ -2,7 +2,10 @@
 
 A template for vanilla web components.
 
-See [Web Component lifecycle methods](https://gomakethings.com/the-web-component-lifecycle-methods/)
+## see also
+
+* [Web Component lifecycle methods](https://gomakethings.com/the-web-component-lifecycle-methods/)
+* [How to detect when attributes change on a Web Component](https://gomakethings.com/how-to-detect-when-attributes-change-on-a-web-component/)
 
 ## use
 1. Use the template button in github. Or clone this then

@@ -17,10 +17,33 @@ export class Example extends HTMLElement {
 
     // Define the attributes to observe
     // need this for `attributeChangedCallback`
-    static observedAttributes = ['exmaple', 'attribute']
+    static observedAttributes = ['exmaple']
 
+    /**
+     * Handle [example] attribute changes
+     *
+     * @param  {string} oldValue The old attribute value
+     * @param  {string} newValue The new attribute value
+     */
+    handleChange_example (oldValue:string, newValue:string) {
+        debug('handling example change', oldValue, newValue)
+
+        if (newValue === null) {
+            // [example] was removed
+        } else {
+            // set [example] attribute
+        }
+    }
+
+    /**
+     * Runs when the value of an attribute is changed on the component
+     * @param  {string} name     The attribute name
+     * @param  {string} oldValue The old attribute value
+     * @param  {string} newValue The new attribute value
+     */
     attributeChangedCallback (name:string, oldValue:string, newValue:string) {
-        debug('an attribute changed', name, oldValue, newValue)
+        this[`handleChange_${name}`](oldValue, newValue)
+        debug('an attribute changed', name)
     }
 
     disconnectedCallback () {
