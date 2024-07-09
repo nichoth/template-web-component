@@ -1,6 +1,13 @@
 import { createDebug } from '@bicycle-codes/debug'
 const debug = createDebug()
 
+// for docuement.querySelector
+declare global {
+    interface HTMLElementTagNameMap {
+        'example-element': Example
+    }
+}
+
 export class Example extends HTMLElement {
     constructor () {
         super()
