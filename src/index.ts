@@ -16,6 +16,7 @@ export class Example extends HTMLElement {
     }
 
     // Define the attributes to observe
+    // need this for `attributeChangedCallback`
     static observedAttributes = ['exmaple', 'attribute']
 
     attributeChangedCallback (name:string, oldValue:string, newValue:string) {
