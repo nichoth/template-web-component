@@ -27,7 +27,7 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
-    "@bicycle-codes/debug": "^0.6.8",
+    "@bicycle-codes/debug": "^0.6.13",
     "@bicycle-codes/dom": "^0.0.23",
     "@bicycle-codes/tapzero": "^0.10.0",
     "@typescript-eslint/eslint-plugin": "^7.9.0",
