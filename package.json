@@ -38,6 +38,7 @@
     "esbuild": "^0.23.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
+    "markdown-toc": "^1.2.0",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
     "postcss-nesting": "^12.1.5",
