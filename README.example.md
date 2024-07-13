@@ -10,6 +10,8 @@
 
 [See a live demo](https://namespace.github.io/package-name/)
 
+<!-- toc -->
+
 ## install
 
 Installation instructions
