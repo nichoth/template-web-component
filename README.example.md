@@ -72,16 +72,23 @@ import '@namespace/package/module'
 </div>
 ```
 
-### pre-built JS
-This package exposes minified JS files too. Copy them to a location that is
+### pre-built
+This package exposes minified JS and CSS files too. Copy them to a location that is
 accessible to your web server, then link to them in HTML.
 
 #### copy
 ```sh
-cp ./node_modules/@namespace/package/dist/module.min.js ./public
+cp ./node_modules/@substrate-system/package/dist/index.min.js ./public/button-element.min.js
+cp ./node_modules/@substrate-system/button-element/dist/style.min.css ./public/button-element.css
 ```
 
 #### HTML
 ```html
-<script type="module" src="./module.min.js"></script>
+<head>
+    <link rel="stylesheet" href="./filename.css">
+</head>
+<body>
+    <!-- ... -->
+    <script type="module" src="./filename.min.js"></script>
+</body>
 ```
