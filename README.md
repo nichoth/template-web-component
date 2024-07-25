@@ -32,12 +32,15 @@ A template for vanilla web components.
 * use [exports](./package.json#L41) field in `package.json` to make sure the right format is used
   by consumers.
 * `preversion` npm hook -- lint
+* `version` npm hook -- generate a TOC for the README, and create and add a
+  changelog
 * `postversion` npm hook -- `git push --follow-tags && npm publish`
 * eslint -- `npm run lint`
 * tests run in a browser environment via `tape-run` -- see [`npm test`](./package.json#L12).
   Includes `tap` testing tools -- [tapzero](https://github.com/bicycle-codes/tapzero)
   and [tap-spec](https://www.npmjs.com/package/tap-spec)
 * CI via github actions
+* [stylelint](https://stylelint.io/) -- see [preversion npm hook](https://github.com/nichoth/template-web-component/blob/main/package.json#L25)
 
 ## the component
 
