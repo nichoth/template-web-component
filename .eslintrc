@@ -30,7 +30,6 @@
         "maxEOF": 1
       }
     ],
-    "no-undef": "off",
     "indent": ["error", 4, {
       "SwitchCase": 1,
       "ignoredNodes": ["TemplateLiteral *"]
