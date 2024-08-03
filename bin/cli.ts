@@ -16,6 +16,10 @@ const argv = yargs(hideBin(process.argv))
 
 const { _, ...templateParams } = argv
 
+if (!templateParams['package-name'] || !templateParams['component-name']) {
+    throw new Error('Missing required params.')
+}
+
 // example files
 const exampleFilePaths = await globby(path.resolve(__dirname, '..', 'example', '*'))
 const exampleFiles = await Promise.all(exampleFilePaths.map(async filepath => {
