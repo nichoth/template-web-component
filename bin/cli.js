@@ -32,11 +32,14 @@ const testFilePath = path.resolve(__dirname, "..", "test", "index.ts");
 const testFile = "" + await fs.readFile(testFilePath);
 const testTemplate = Handlebars.compile(testFile);
 await fs.writeFile(testFilePath, testTemplate(templateParams));
-const packagePath = path.resolve(__dirname, "package.json");
+const packagePath = path.resolve(__dirname, "..", "package.json");
 const _package = "" + await fs.readFile(packagePath);
 const packageJsonTemplate = Handlebars.compile(_package);
 const packageJson = packageJsonTemplate(templateParams);
 const parsed = JSON.parse(packageJson);
 delete parsed.scripts["build-cli"];
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2));
-await fs.rm(path.resolve(__dirname, "bin"), { recursive: true, force: true });
+await fs.rm(path.resolve(path.resolve(__dirname)), {
+  recursive: true,
+  force: true
+});

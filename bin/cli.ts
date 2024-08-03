@@ -47,7 +47,7 @@ const testTemplate = Handlebars.compile(testFile)
 await fs.writeFile(testFilePath, testTemplate(templateParams))
 
 // package.json
-const packagePath = path.resolve(__dirname, 'package.json')
+const packagePath = path.resolve(__dirname, '..', 'package.json')
 const _package = '' + await fs.readFile(packagePath)
 const packageJsonTemplate = Handlebars.compile(_package)
 const packageJson = packageJsonTemplate(templateParams)
@@ -56,4 +56,7 @@ delete parsed.scripts['build-cli']
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2))
 
 // rm this file too
-await fs.rm(path.resolve(__dirname, 'bin'), { recursive: true, force: true })
+await fs.rm(path.resolve(path.resolve(__dirname)), {
+    recursive: true,
+    force: true
+})

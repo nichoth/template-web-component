@@ -4,7 +4,7 @@ const debug = createDebug()
 // for docuement.querySelector
 declare global {
     interface HTMLElementTagNameMap {
-        'example-element': Example
+        '{{component-name}}': Example
     }
 }
 
@@ -72,4 +72,4 @@ export class Example extends HTMLElement {
     }
 }
 
-customElements.define('example-component', Example)
+customElements.define('{{component-name}}', Example)
