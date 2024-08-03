@@ -1,5 +1,5 @@
 {
-  "name": "@nichoth/example-webcomponent",
+  "name": "{{package-name}}",
   "private": true,
   "type": "module",
   "version": "0.0.0",
@@ -20,6 +20,7 @@
     "build-example": "mkdir -p ./public && rm -rf ./public/* && VITE_DEBUG_MODE=staging vite --mode staging --base=\"/repo-name\" build",
     "build-docs": "typedoc --tsconfig tsconfig.build.json ./src/index.ts",
     "build": "mkdir -p ./dist && rm -rf ./dist/* && npm run build-cjs && npm run build-esm && npm run build-esm:min && npm run build-css && npm run build-css:min",
+    "cli": "esbuild ./bin/cli.ts > ./bin/cli.js && node ./bin/cli.js hello --foo bar",
     "start": "vite",
     "toc": "markdown-toc --maxdepth 3 -i README.md",
     "preversion": "npm run lint && stylelint src/*.css",
@@ -27,7 +28,6 @@
     "postversion": "git push --follow-tags && npm publish",
     "prepublishOnly": "npm run build"
   },
-  "dependencies": {},
   "devDependencies": {
     "@bicycle-codes/debug": "^0.6.13",
     "@bicycle-codes/dom": "^0.0.23",
@@ -39,6 +39,8 @@
     "esbuild": "^0.23.0",
     "eslint": "^8.57.0",
     "eslint-config-standard": "^17.1.0",
+    "globby": "^14.0.2",
+    "handlebars": "^4.7.8",
     "markdown-toc": "^1.2.0",
     "postcss": "^8.4.38",
     "postcss-cli": "^11.0.0",
@@ -49,7 +51,8 @@
     "tape-run": "^11.0.0",
     "typedoc": "^0.26.2",
     "typescript": "^5.4.5",
-    "vite": "^5.3.4"
+    "vite": "^5.3.4",
+    "yargs": "^17.7.2"
   },
   "exports": {
     ".": {
