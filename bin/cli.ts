@@ -64,6 +64,12 @@ const parsed:{ scripts: { 'build-cli'?:string } } = JSON.parse(packageJson)
 delete parsed.scripts['build-cli']
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2))
 
+// docs
+const readmePath = path.resolve(__dirname, 'README.example.md')
+const readmeTmpl = Handlebars.compile(await fs.readFile(readmePath))
+const newReadme = readmeTmpl(templateParams)
+await fs.writeFile(path.resolve(__dirname, 'README.md'), newReadme)
+
 // rm this file too
 await fs.rm(path.resolve(path.resolve(__dirname)), {
     recursive: true,
