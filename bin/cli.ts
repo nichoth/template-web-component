@@ -17,9 +17,9 @@ const argv = yargs(hideBin(process.argv))
 const { _, ...templateParams } = argv
 
 // example files
-const exampleFilePaths = await globby(path.join(__dirname, '..', 'example', '*'))
-const exampleFiles = await Promise.all(exampleFilePaths.map(filepath => {
-    return fs.readFile(filepath)
+const exampleFilePaths = await globby(path.resolve(__dirname, '..', 'example', '*'))
+const exampleFiles = await Promise.all(exampleFilePaths.map(async filepath => {
+    return ('' + await fs.readFile(filepath))
 }))
 
 exampleFiles.forEach(async (fileContent, i) => {
@@ -28,19 +28,32 @@ exampleFiles.forEach(async (fileContent, i) => {
 })
 
 // src
+const srcFilePaths = await globby(path.resolve(__dirname, '..', 'src', '*'))
 const srcFiles = await Promise.all(
-    (await globby(path.join(__dirname, '..', 'src', '*'))).map(filepath => {
-        return fs.readFile(filepath)
+    srcFilePaths.map(async filepath => {
+        return ('' + await fs.readFile(filepath))
     })
 )
 
 srcFiles.forEach(async (fileContent, i) => {
     const template = Handlebars.compile(fileContent)
-    await fs.writeFile(srcFiles[i], template(templateParams))
+    await fs.writeFile(srcFilePaths[i], template(templateParams))
 })
 
 // tests
-const testFilePath = path.join(__dirname, '..', 'test', 'index.ts')
-const testFile = await fs.readFile(testFilePath)
+const testFilePath = path.resolve(__dirname, '..', 'test', 'index.ts')
+const testFile = '' + await fs.readFile(testFilePath)
 const testTemplate = Handlebars.compile(testFile)
 await fs.writeFile(testFilePath, testTemplate(templateParams))
+
+// package.json
+const packagePath = path.resolve(__dirname, 'package.json')
+const _package = '' + await fs.readFile(packagePath)
+const packageJsonTemplate = Handlebars.compile(_package)
+const packageJson = packageJsonTemplate(packagePath, templateParams)
+const parsed:{ scripts: { 'build-cli'?:string } } = JSON.parse(packageJson)
+delete parsed.scripts['build-cli']
+await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2))
+
+// rm this file too
+await fs.rm(path.resolve(__dirname, 'bin'), { recursive: true, force: true })
