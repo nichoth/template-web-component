@@ -1,15 +1,15 @@
 # package name here
-![tests](https://github.com/substrate-system/icons/actions/workflows/nodejs.yml/badge.svg)
-[![types](https://img.shields.io/npm/types/@substrate-system/icons?style=flat-square)](README.md)
+![tests](https://github.com/{{gh-namespace}}/{{repo-name}}/actions/workflows/nodejs.yml/badge.svg)
+[![types](https://img.shields.io/npm/types/{{package-name}}?style=flat-square)](README.md)
 [![module](https://img.shields.io/badge/module-ESM%2FCJS-blue?style=flat-square)](README.md)
-[![install size](https://packagephobia.com/badge?p=@substrate-system/packagename)](https://packagephobia.com/result?p=@substrate-system/packagename)
+[![install size](https://packagephobia.com/badge?p={{package-name}})](https://packagephobia.com/result?p={{package-name}})
 [![dependencies](https://img.shields.io/badge/dependencies-zero-brightgreen.svg?style=flat-square)](package.json)
 [![semantic versioning](https://img.shields.io/badge/semver-2.0.0-blue?logo=semver&style=flat-square)](https://semver.org/)
 [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
 
 `<package description goes here>`
 
-[See a live demo](https://namespace.github.io/package-name/)
+[See a live demo](https://{{gh-namespace}}.github.io/{{repo-name}}/)
 
 <!-- toc -->
 
@@ -18,7 +18,7 @@
 Installation instructions
 
 ```sh
-npm i -S @namespace/package
+npm i -S {{package-name}}
 ```
 
 ## API
@@ -27,12 +27,12 @@ This exposes ESM and common JS via [package.json `exports` field](https://nodejs
 
 ### ESM
 ```js
-import '@namespace/package/module'
+import '{{package-name}}'
 ```
 
 ### Common JS
 ```js
-require('@namespace/package/module')
+require('{{package-name}}')
 ```
 
 ## CSS
@@ -40,18 +40,18 @@ require('@namespace/package/module')
 ### Import CSS
 
 ```js
-import '@namespace/package-name/css'
+import '{{package-name}}/css'
 ```
 
 Or minified:
 ```js
-import '@namespace/package-name/css/min'
+import '{{package-name}}/css/min'
 ```
 
 ### Customize CSS via some variables
 
 ```css
-component-name {
+{{component-name}} {
     --example: pink;
 }
 ```
@@ -62,13 +62,13 @@ the tag in your HTML.
 
 ### JS
 ```js
-import '@namespace/package/module'
+import '{{package-name}}'
 ```
 
 ### HTML
 ```html
 <div>
-    <example-component></example-component>
+    <{{component-name}}></{{component-name}}>
 </div>
 ```
 
@@ -78,8 +78,8 @@ accessible to your web server, then link to them in HTML.
 
 #### copy
 ```sh
-cp ./node_modules/@substrate-system/package/dist/index.min.js ./public/button-element.min.js
-cp ./node_modules/@substrate-system/button-element/dist/style.min.css ./public/button-element.css
+cp ./node_modules/{{package-name}}/dist/index.min.js ./public/{{component-name}}.min.js
+cp ./node_modules/{{package-name}}/dist/style.min.css ./public/{{component-name}}.css
 ```
 
 #### HTML

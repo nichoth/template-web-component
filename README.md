@@ -11,6 +11,20 @@ A template for vanilla web components.
 1. Use the template button in github. Or clone this then
 `rm -rf .git && git init`. Then `npm i && npm init`.
 
+* Use the template system to re-name this module and start the docs:
+```sh
+node ./bin/cli.js --package-name=@nichoth/example --component-name=my-component --gh-namespace nichoth --repo-name my-repo-name
+```
+
+__The templates take several variables__
+
+* `--gh-namespace` -- first path segment on github
+* `--package-name` -- package name, including any namespace. eg, `@alice/package`
+* `--component-name` -- the name of the web component, as used in HTML, eg `cool-example`
+* `--repo-name` -- repository name, the last segment in github URL,
+  eg, `github.com/user/repo-name-here`
+
+
 2. Edit the source code in `src/index.ts`.
 
 3. Delete either `.github/workflows/gh-pages-docs.yml` or `.github/workflows/gh-pages.yml`, depending on whether you want to deploy an example or docs to github pages.

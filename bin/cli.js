@@ -10,7 +10,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const argv = yargs(hideBin(process.argv)).scriptName("templater").usage("$0 --package-name=@namespace/name --component-name=my-webcomponent").help().argv;
 const { _, ...templateParams } = argv;
-if (!templateParams["package-name"] || !templateParams["component-name"]) {
+if (!templateParams["package-name"] || !templateParams["component-name"] || !templateParams["gh-namespace"] || !templateParams["repo-name"]) {
   throw new Error("Missing required params.");
 }
 const exampleFilePaths = await globby(path.resolve(__dirname, "..", "example", "*"));

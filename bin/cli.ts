@@ -16,7 +16,12 @@ const argv = yargs(hideBin(process.argv))
 
 const { _, ...templateParams } = argv
 
-if (!templateParams['package-name'] || !templateParams['component-name']) {
+if (
+    !templateParams['package-name'] ||
+    !templateParams['component-name'] ||
+    !templateParams['gh-namespace'] ||
+    !templateParams['repo-name']
+) {
     throw new Error('Missing required params.')
 }
 
