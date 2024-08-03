@@ -66,7 +66,7 @@ await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2))
 
 // docs
 const readmePath = path.resolve(__dirname, '..', 'README.example.md')
-const readmeTmpl = Handlebars.compile(await fs.readFile(readmePath))
+const readmeTmpl = Handlebars.compile('' + await fs.readFile(readmePath))
 const newReadme = readmeTmpl(templateParams)
 await fs.writeFile(path.resolve(__dirname, 'README.md'), newReadme)
 
