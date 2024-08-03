@@ -50,7 +50,7 @@ await fs.writeFile(testFilePath, testTemplate(templateParams))
 const packagePath = path.resolve(__dirname, 'package.json')
 const _package = '' + await fs.readFile(packagePath)
 const packageJsonTemplate = Handlebars.compile(_package)
-const packageJson = packageJsonTemplate(packagePath, templateParams)
+const packageJson = packageJsonTemplate(templateParams)
 const parsed:{ scripts: { 'build-cli'?:string } } = JSON.parse(packageJson)
 delete parsed.scripts['build-cli']
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2))
