@@ -41,6 +41,7 @@ const packageJsonTemplate = Handlebars.compile(_package);
 const packageJson = packageJsonTemplate(templateParams);
 const parsed = JSON.parse(packageJson);
 delete parsed.scripts["build-cli"];
+delete parsed.devDependencies.globby;
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2));
 const readmePath = path.resolve(__dirname, "..", "README.example.md");
 const readmeTmpl = Handlebars.compile("" + await fs.readFile(readmePath));
