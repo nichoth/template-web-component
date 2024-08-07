@@ -85,10 +85,10 @@ cp ./node_modules/{{package-name}}/dist/style.min.css ./public/{{component-name}
 #### HTML
 ```html
 <head>
-    <link rel="stylesheet" href="./filename.css">
+    <link rel="stylesheet" href="./{{component-name}}.css">
 </head>
 <body>
     <!-- ... -->
-    <script type="module" src="./filename.min.js"></script>
+    <script type="module" src="./{{component-name}}.min.js"></script>
 </body>
 ```
