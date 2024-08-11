@@ -62,10 +62,16 @@ const packageJsonTemplate = Handlebars.compile(_package)
 const packageJson = packageJsonTemplate(templateParams)
 const parsed:{
     scripts: { 'build-cli'?:string },
-    devDependencies: { globby?:string }
+    devDependencies: Partial<{
+        globby:string;
+        handlebars:string;
+        yargs:string
+    }>
 } = JSON.parse(packageJson)
 delete parsed.scripts['build-cli']
 delete parsed.devDependencies.globby
+delete parsed.devDependencies.handlebars
+delete parsed.devDependencies.yargs
 
 await fs.writeFile(packagePath, JSON.stringify(parsed, null, 2))
 
