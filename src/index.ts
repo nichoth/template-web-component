@@ -72,4 +72,6 @@ export class Example extends HTMLElement {
     }
 }
 
-customElements.define('{{component-name}}', Example)
+if ('customElements' in window) {
+    customElements.define('{{component-name}}', Example)
+}
