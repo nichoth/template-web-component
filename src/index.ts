@@ -49,8 +49,9 @@ export class Example extends HTMLElement {
      * @param  {string} newValue The new attribute value
      */
     attributeChangedCallback (name:string, oldValue:string, newValue:string) {
-        this[`handleChange_${name}`](oldValue, newValue)
         debug('an attribute changed', name)
+        const handler = this[`handleChange_${name}`];
+        (handler && handler(oldValue, newValue))
     }
 
     disconnectedCallback () {
